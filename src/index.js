@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-//import the default export from the greeting module
-//import the named exports from the helpers module
+import greeting from "./greeting.js";
+import { subHeader, organize } from "./helpers.js";
 
 import "./styles.css";
 
@@ -10,11 +10,13 @@ function App() {
     <div className="App">
       {/* render the default export from the greeting module 
         here as the content of an h2 tag */}
+      <h2>{greeting}</h2>
       {/* render the named export 'subHeader' from the helpers 
         module here as the content of an h5 tag */}
+      <h5>{subHeader}</h5>
       {/* pass the named export 'organize' from the helpers 
-        module here as `src` attribute of the img tag */}
-      <img alt="stay organzied" />
+        module here as src attribute of the img tag */}
+      <img src={organize} alt="stay organzied" />
     </div>
   );
 }
